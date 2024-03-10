@@ -100,7 +100,6 @@ class MSPM0_I2C:
 
         ret_crc = msp_crc([header[3]] + ret[0:-4])
 
-
         if ret_crc != ret[-4:]:
             return False
 
@@ -108,7 +107,6 @@ class MSPM0_I2C:
             return True
 
         print(ret[0])
-
 
         return False
 
