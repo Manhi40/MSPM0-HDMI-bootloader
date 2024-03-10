@@ -91,36 +91,6 @@ class MSPM0_BSL:
             print("message error")
 
     def program_hex(self, filename: str):
-        # ih = IntelHex()
-        # ih.loadhex(filename)
-        # # Getting all addresses in sorted order
-        # addresses = sorted(ih.addresses())
-        #
-        # # Initialize variables
-        # start_addr = None
-        # current_block = []
-        #
-        # # Iterate through addresses
-        # for addr in addresses:
-        #     if start_addr is None:
-        #         # Start a new block
-        #         start_addr = addr
-        #
-        #     if addr - start_addr < 8:
-        #         # Add value to current block
-        #         current_block.append(ih[addr])
-        #     else:
-        #         # Print and reset for next block
-        #         print(f"Block start: {start_addr}, Data: {current_block}")
-        #         self.program_block(int_to_4_byte_addr(start_addr), current_block)
-        #         start_addr = addr
-        #         current_block = [ih[addr]]
-        #
-        # # Print the last block if it's not empty
-        # if current_block:
-        #     print(f"Block start: {start_addr}, Data: {current_block}")
-        #     self.program_block(int_to_4_byte_addr(start_addr), current_block)
-
         with open(filename, "r") as fw_file:
             offset = 0
             for line in fw_file:
