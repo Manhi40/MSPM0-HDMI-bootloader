@@ -2,6 +2,7 @@ from mspm0_bsl import MSPM0_BSL
 import time
 import sys
 
+# Create bootloader object using /dev/i2c-3
 device = MSPM0_BSL(3)
 
 
