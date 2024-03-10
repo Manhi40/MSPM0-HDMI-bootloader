@@ -1,6 +1,4 @@
 from mspm0_i2c import MSPM0_I2C
-from intelhex import IntelHex
-import time
 
 
 def slice_to_int(slice: list):

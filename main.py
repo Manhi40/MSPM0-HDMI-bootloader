@@ -4,8 +4,6 @@ import sys
 
 device = MSPM0_BSL(3)
 
-# print("Test device connection")
-
 
 if not device.connect():
     print("Failed to connect")

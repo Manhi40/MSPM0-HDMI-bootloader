@@ -1,5 +1,3 @@
-import sys
-
 from smbus import SMBus
 # from smbus2 import SMBus
 import zlib
@@ -116,8 +114,3 @@ class MSPM0_I2C:
 
     def send_data(self, cmd, msp_data, read_len):
         return self.send_command([cmd] + msp_data, read_len)
-
-# bus.write_i2c_block_data(0x48, 0x80, [0x01, 0x00, 0x12, 0x3A, 0x61, 0x44, 0xDE])
-# data = bus.read_byte(0x48)
-#
-# print(data)
